@@ -1,5 +1,7 @@
 FROM maven:alpine
 
+RUN apk update && apk add git
+
 ADD * /backup/
 ADD build.sh /opt/build.sh
 WORKDIR /project
